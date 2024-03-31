@@ -1,0 +1,43 @@
+#breadcrumbs {
+  a {
+    text-decoration: underline;
+    text-decoration-color: #496f6e;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  ul > li {
+    list-style-type: none;
+  }
+
+  .breadcrumb-not-active {
+    color: black;
+
+    &:after {
+      font: 16px "maIco";
+      color: #496f6e;
+      content: ">";
+      display: inline-block;
+      padding: 0 12px;
+    }
+  }
+
+  .breadcrumb-active {
+    color: #496f6e;
+    font-weight: 600;
+    pointer-events: none;
+    text-decoration: none;
+  }
+}
+@media (max-width: 680px) {
+  #breadcrumbs {
+    ul > li {
+      font-size: 14px;
+    }
+    ul {
+      flex-wrap: wrap;
+    }
+  }
+}

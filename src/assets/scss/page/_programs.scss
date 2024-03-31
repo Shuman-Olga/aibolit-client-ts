@@ -1,0 +1,49 @@
+#programs {
+  .text {
+    font-size: 18px;
+    line-height: 1.5em;
+    ul {
+      text-align: left;
+    }
+    a {
+      color: black;
+    }
+  }
+  .foto {
+    width: 40vw;
+  }
+  .card-prog {
+    background: rgba(149, 183, 182, 0.6);
+    margin: 20px;
+  }
+  .color-back {
+    background: rgba(157, 167, 189, 0.5);
+  }
+  .font-text {
+    font-family: comic sans ms, comic-sans-w01-regular, comic-sans-w02-regular,
+      comic-sans-w10-regular, cursive;
+    color: #3e5352;
+    padding: 0 15px;
+  }
+  .block {
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #55617a;
+    }
+  }
+}
+@media (max-width: 800px) {
+  #programs {
+    .block-foto {
+      flex-direction: column;
+      align-items: center;
+    }
+    .foto{
+      width: 100%;
+    }
+    .card-prog img {
+      display: none;
+    }
+  }
+}

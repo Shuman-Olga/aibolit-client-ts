@@ -1,0 +1,25 @@
+#programone, #programthree, #programtwo {
+  .block-table {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+  .font-size-min {
+    font-size: 10px;
+  }
+  .font-text{
+    font-size: 12px;
+  }
+}
+@media (max-width: 800px) {
+  #programone, #programthree, #programtwo {
+    .block-table {
+      margin: 0;
+    }
+    .px-3 {
+      padding-right: 0 !important;
+    }
+    .progone-img {
+      width: 80vw;
+    }
+  }
+}
