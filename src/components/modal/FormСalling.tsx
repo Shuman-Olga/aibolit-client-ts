@@ -4,7 +4,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Button, FloatingLabel, Form } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 
-import { dataDoctors } from "../../data/dataListDoctors";
+import { dataKindDoctors } from "../../data/dataListKindDoctors";
 import { ModalContext } from "../../context/ModelContext";
 import FormField from "./FormField";
 import { TypeForm, formChema } from "../../types/formShema";
@@ -73,8 +73,8 @@ export function FormCallingDoctor() {
           <Form.Group className="mb-3">
             <Form.Select id="doctor" {...register("doctor")}>
               <option>Выберите врача...</option>
-              {dataDoctors &&
-                dataDoctors.map((item) => (
+              {dataKindDoctors &&
+                dataKindDoctors.map((item) => (
                   <option key={item.id} value={item.name}>
                     {item.name}
                   </option>

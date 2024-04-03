@@ -5,8 +5,6 @@ import logo from "../assets/img/aibolit_logo.png";
 import { ModalWindows } from "./modal/Modal";
 import { FormCallingDoctor } from "./modal/FormСalling";
 import { Navigation } from "./navigations/Navigation";
-// import Navigation from "./navigations/Navigation";
-// import ModalCalling from "./modalWindows/ModalCalling";
 
 export function Header() {
   return (
