@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Button, Modal } from "react-bootstrap";
-import imgHome from "../../assets/img/home.png";
+
 import { ModalContext } from "../../context/ModelContext";
 
 interface ModalProps {
@@ -13,7 +13,12 @@ export function ModalWindows({ children, title }: ModalProps) {
   return (
     <div id="modalcalling">
       <Button className="btn-showmodal" onClick={open}>
-        <img src={imgHome} alt="home" className="img home" title="home" />
+        <img
+          src={require(`../../assets/img/home.png`)}
+          alt="home"
+          className="img"
+          title="home"
+        />
         {title}
       </Button>
 

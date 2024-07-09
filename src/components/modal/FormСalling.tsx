@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 
 import { dataKindDoctors } from "../../data/dataListKindDoctors";
 import { ModalContext } from "../../context/ModelContext";
-import FormField from "./FormField";
+import { FormField } from "./FormField";
 import { TypeForm, formChema } from "../../types/formShema";
 
 export function FormCallingDoctor() {
@@ -22,20 +22,20 @@ export function FormCallingDoctor() {
   } = useForm<TypeForm>({ resolver: zodResolver(formChema) });
 
   const onSubmit: SubmitHandler<TypeForm> = async (data) => {
-    // await emailjs
-    //   .send("service_3v0hnkn", "template_ooahi3b", data, "PhUOVu-NXcTpMJR7t")
-    //   .then((response) => {
-    //     if (response.status === 200) {
-    setMessage("Сообщение отправлено!");
-    //     }
-    //     reset();
-    setTimeout(() => {
-      close();
-    }, 2000);
-    //   })
-    //   .catch((err) => {
-    //     console.log("Упс! Ошибочка...", err);
-    //   });
+    await emailjs
+      .send("service_3v0hnkn", "template_ooahi3b", data, "PhUOVu-NXcTpMJR7t")
+      .then((response) => {
+        if (response.status === 200) {
+          setMessage("Сообщение отправлено!");
+        }
+        reset();
+        setTimeout(() => {
+          close();
+        }, 2000);
+      })
+      .catch((err) => {
+        console.log("Упс! Ошибочка...", err);
+      });
   };
   useEffect(() => {
     // устанавливаем фокус на первое поле (имя пользователя) после монтирования компонента

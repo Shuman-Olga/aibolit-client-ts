@@ -1,7 +1,8 @@
+import React from "react";
 import { Container } from "react-bootstrap";
 
 import { AdvantageItem } from "./advantageItems";
-import { datalistAdvantage } from "../../data/dataDoctor/dataAdvantage";
+import { datalistAdvantage } from "../../data/dataAdvantage";
 
 export function BlockAdvantages() {
   return (

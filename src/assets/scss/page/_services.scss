@@ -1,4 +1,5 @@
-#services, #medical-certificates {
+#services,
+#medicalcertificates {
   .w-75 {
     margin: 0 auto;
     &:hover {
@@ -10,14 +11,13 @@
   }
 }
 @media (max-width: 800px) {
-  #services{
-    .block-foto{
-        flex-direction: column;
-        align-items: center;
+  #services {
+    .block-foto {
+      flex-direction: column;
+      align-items: center;
     }
-    .w-75{
-      width: 100%!important;
+    .w-75 {
+      width: 100% !important;
     }
-  
   }
 }

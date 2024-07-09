@@ -1,10 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/img/aibolit_logo.png";
-import { ModalWindows } from "./modal/Modal";
+
 import { FormCallingDoctor } from "./modal/FormСalling";
 import { Navigation } from "./navigations/Navigation";
+import { ModalWindows } from "./modal/Modal";
+import { ModalProvider } from "../context/ModelContext";
 
 export function Header() {
   return (
@@ -18,7 +19,7 @@ export function Header() {
             rel="noopener noreferrer"
           >
             <img
-              src={logo}
+              src={require(`../assets/img/aibolit_logo.png`)}
               alt="logo-aibolit"
               className="img-fluid img-logo"
               title="logo-aibolit"
@@ -29,18 +30,24 @@ export function Header() {
         <div>
           <p className="phone"> +7 (3822) 60-92-43</p>
           <p className="date text-center fw-bolder">
-            Пн-пт: 08:00 - 19:00
-            <br /> Суб: 09:00 - 14:00
+            Пн-Пт: 08:00 - 19:00
+            <br /> Сб: 09:00 - 14:00
           </p>
         </div>
         <div>
-          <ModalWindows title="Вызов врача на дом">
-            <FormCallingDoctor />
-          </ModalWindows>
+          <ModalProvider>
+            <ModalWindows title="Вызов врача на дом">
+              <FormCallingDoctor />
+            </ModalWindows>
+          </ModalProvider>
         </div>
       </div>
       <Navigation />
-      {/* <Navbar /> */}
     </Container>
   );
 }
+<ModalProvider>
+  <ModalWindows title="Вызов врача на дом">
+    <FormCallingDoctor />
+  </ModalWindows>
+</ModalProvider>;

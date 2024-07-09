@@ -1,13 +1,13 @@
+import React from "react";
 import { Container, Nav } from "react-bootstrap";
-import logo from "../assets/img/aibolit_logo.png";
 import { NavLink } from "react-router-dom";
+
 // import ModalCallback from "./modalWindows/ModalCallback";
-import vkimg from "../assets/img/vk-img.png";
 
 export function Footer() {
   return (
-    <Container fluid>
-      <Container id="footer" className="d-flex justify-content-around">
+    <Container id="footer" fluid>
+      <Container className="d-flex justify-content-around">
         <div className="block-1">
           <h3 className="mb-5">О Айболите</h3>
           <Nav className="flex-column mt-3">
@@ -62,7 +62,12 @@ export function Footer() {
           </Nav>
         </div>
         <div className="text-center">
-          <img src={logo} alt="logo" className="w-25 img mb-4" title="logo" />
+          <img
+            src={require(`../assets/img/aibolit_logo.png`)}
+            alt="logo"
+            className="w-25 img mb-4"
+            title="logo"
+          />
           <a
             href="mailto:aibolittom70@gmail.com"
             target="_self"
@@ -76,7 +81,12 @@ export function Footer() {
             target="_top"
             rel="noopener noreferrer"
           >
-            <img src={vkimg} alt="logo-vk" className="img-vk mt-4" title="vk" />
+            <img
+              src={require(`../assets/img/vk-img.png`)}
+              alt="logo-vk"
+              className="img-vk mt-4"
+              title="vk"
+            />
           </a>
           <p className="fw-light mt-4">
             Информация и цены, представленные на сайте, являются справочными и

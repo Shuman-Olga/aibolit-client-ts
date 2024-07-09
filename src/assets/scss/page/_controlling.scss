@@ -1,19 +1,15 @@
-#controlling,
-#documents {
+#controlling {
   a {
     font-size: 20px;
     color: rgb(24, 24, 24);
   }
   .arrow-svg {
     display: inline;
-    transform: rotate(180deg);
     top: 10%;
     left: 15%;
     padding-right: 15px;
     svg {
       fill: #83e6d4;
-      width: 20px;
-      height: 20px;
     }
   }
 }

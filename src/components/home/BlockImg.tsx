@@ -1,17 +1,13 @@
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
-
-import background from "../../assets/img/img-home.jpg";
-import BIimg1 from "../../assets/img/home.png";
-import BIimg2 from "../../assets/img/calling.png";
-import BIimg3 from "../../assets/img/analyzes.png";
 
 export function BlockImg() {
   return (
     <Container id="blockimg" className="">
       <div className="position-relative position-img">
         <img
-          src={background}
+          src={require(`../../assets/img/img-home.jpg`)}
           alt="img-background"
           className=" img-background"
         />
@@ -57,12 +53,12 @@ export function BlockImg() {
           <div className="block-btn color1">
             <div className="block-btn-border">
               <img
-                src={BIimg1}
+                src={require(`../../assets/img/home.png`)}
                 alt="img-home"
                 className="block-btn-img"
                 title="img-home"
               />
-              <p>Вызов врача на дом</p>
+              <p className="text-center">Вызов врача на дом</p>
             </div>
           </div>
         </NavLink>
@@ -75,12 +71,12 @@ export function BlockImg() {
           <div className="block-btn color2">
             <div className="block-btn-border">
               <img
-                src={BIimg2}
+                src={require(`../../assets/img/calling.png`)}
                 alt="img-programm"
                 className="block-btn-img2"
                 title="img-programm"
               />
-              <p>Программы</p>
+              <p className="text-center">Программы</p>
             </div>
           </div>
         </NavLink>
@@ -93,12 +89,12 @@ export function BlockImg() {
           <div className="block-btn color3">
             <div className="block-btn-border">
               <img
-                src={BIimg3}
+                src={require(`../../assets/img/analyzes.png`)}
                 alt="img-analyz"
                 className="block-btn-img"
                 title="img-analyz"
               />
-              <p>Анализы</p>
+              <p className="text-center">Анализы</p>
             </div>
           </div>
         </NavLink>

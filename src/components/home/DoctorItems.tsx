@@ -1,18 +1,18 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
+
 import { TypeDoctor } from "../../types/typeDoctorItem";
-import { TypeLinkMenu } from "../../types/typeLinkMenu";
 
 export function DoctorItem({
   firstname,
   lastname,
   surname,
   img,
-  title,
   path,
-}: TypeDoctor & TypeLinkMenu) {
+}: TypeDoctor) {
   return (
     <NavLink
-      to={path}
+      to={`/doctors/${path}/`}
       className="nav-link"
       target="_top"
       rel="noopener noreferrer"
@@ -22,8 +22,8 @@ export function DoctorItem({
           <img
             src={require(`../../assets/img/${img}`)}
             className="card-img-top"
-            alt={firstname}
-            title={title}
+            alt={lastname}
+            title={lastname}
           />
           <div className="card-body">
             <p className="card-text">{lastname}</p>

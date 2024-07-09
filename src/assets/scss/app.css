@@ -35,8 +35,20 @@ body {
   color: #3e5352;
 }
 
+#blockadvantages p {
+  text-align: center;
+}
+
+p,
+li {
+  text-align: justify;
+}
+
 #home {
   margin-top: 2rem;
+}
+#home #breadcrumbs {
+  display: none;
 }
 
 #blockimg {
@@ -120,24 +132,18 @@ body {
     align-items: center;
   }
 }
-#controlling a,
-#documents a {
+#controlling a {
   font-size: 20px;
   color: rgb(24, 24, 24);
 }
-#controlling .arrow-svg,
-#documents .arrow-svg {
+#controlling .arrow-svg {
   display: inline;
-  transform: rotate(180deg);
   top: 10%;
   left: 15%;
   padding-right: 15px;
 }
-#controlling .arrow-svg svg,
-#documents .arrow-svg svg {
+#controlling .arrow-svg svg {
   fill: #83e6d4;
-  width: 20px;
-  height: 20px;
 }
 
 @media (max-width: 980px) {
@@ -155,13 +161,19 @@ body {
     width: 70vw;
   }
 }
-#contacts .block-map {
+#contacts .block-map,
+#forpatients .block-map {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   border: 4px solid #496f6e;
 }
-#contacts .door-img, #contacts .clock-png, #contacts .auto-png {
+#contacts .door-img,
+#contacts .clock-png,
+#contacts .auto-png,
+#forpatients .door-img,
+#forpatients .clock-png,
+#forpatients .auto-png {
   width: 40px;
   margin-right: 15px;
 }
@@ -239,43 +251,33 @@ body {
     width: 80vw;
   }
 }
-#doctor1 .border-block,
-#doctor2 .border-block,
-#doctor3 .border-block,
-#doctor4 .border-block {
+#doctor .border-block {
   border: 3px solid rgb(202, 182, 70);
 }
-#doctor1 .margin,
-#doctor2 .margin,
-#doctor3 .margin,
-#doctor4 .margin {
+#doctor .margin {
   margin: 15px auto;
 }
-#doctor1 ul li,
-#doctor2 ul li,
-#doctor3 ul li,
-#doctor4 ul li {
+#doctor ul li {
   margin: 1rem 0;
 }
 
 @media (max-width: 1024px) {
-  #doctor1 .d-flex,
-  #doctor2 .d-flex,
-  #doctor3 .d-flex,
-  #doctor4 .d-flex {
+  #doctor img {
+    width: 75vw;
+  }
+  #doctor .d-flex {
     flex-direction: column;
   }
-  #doctor1 .px-4,
-  #doctor2 .px-4,
-  #doctor3 .px-4,
-  #doctor4 .px-4 {
+  #doctor .px-4 {
     margin-top: 1rem;
   }
 }
-#services .w-75, #medical-certificates .w-75 {
+#services .w-75,
+#medicalcertificates .w-75 {
   margin: 0 auto;
 }
-#services .w-75:hover, #medical-certificates .w-75:hover {
+#services .w-75:hover,
+#medicalcertificates .w-75:hover {
   cursor: pointer;
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.4);
 }
@@ -289,35 +291,42 @@ body {
     width: 100% !important;
   }
 }
-#santornokurortnyakarta .size-img, #spravkazdorove .size-img {
+#santornokurortnyakarta .size-img,
+#spravkazdorove .size-img {
   width: 25vw;
 }
 
 @media (max-width: 1200px) {
-  #medical-certificates {
+  #medicalcertificates {
     margin-top: 0;
   }
 }
 @media (max-width: 1000px) {
-  #medical-certificates .block-foto, #spravkavdetskiisad .block-foto {
+  #medicalcertificates .block-foto,
+  #spravkavdetskiisad .block-foto {
     flex-direction: column;
     align-items: center;
   }
-  #medical-certificates .w-75, #spravkavdetskiisad .w-75 {
+  #medicalcertificates .w-75,
+  #spravkavdetskiisad .w-75 {
     width: 100% !important;
   }
 }
 @media (max-width: 800px) {
-  #spravkavshkolu .block-foto, #spravkavdetskiisad .block-foto, #spravkavbassein .block-foto {
+  #spravkavshkolu .block-foto,
+  #spravkavdetskiisad .block-foto,
+  #spravkavbassein .block-foto {
     flex-direction: column;
     align-items: center;
   }
-  #spravkavshkolu .w-75, #spravkavdetskiisad .w-75, #spravkavbassein .w-75 {
+  #spravkavshkolu .w-75,
+  #spravkavdetskiisad .w-75,
+  #spravkavbassein .w-75 {
     width: 100% !important;
   }
 }
 @media (max-width: 660px) {
-  #medical-certificates {
+  #medicalcertificates {
     margin-top: 0;
   }
 }
@@ -376,6 +385,76 @@ body {
     width: 70%;
   }
 }
+#documents,
+#licenses,
+#pravoinfa,
+#lekarstvo {
+  font-size: 18px;
+}
+#documents a,
+#licenses a,
+#pravoinfa a,
+#lekarstvo a {
+  font-size: 20px;
+  color: rgb(24, 24, 24);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+#documents a:hover,
+#licenses a:hover,
+#pravoinfa a:hover,
+#lekarstvo a:hover {
+  color: rgb(73, 111, 110);
+  text-decoration: underline;
+}
+#documents a:hover i,
+#licenses a:hover i,
+#pravoinfa a:hover i,
+#lekarstvo a:hover i {
+  color: rgb(73, 111, 110);
+}
+#documents .arrow-svg,
+#licenses .arrow-svg,
+#pravoinfa .arrow-svg,
+#lekarstvo .arrow-svg {
+  display: inline;
+  top: 10%;
+  left: 15%;
+  padding-right: 15px;
+}
+#documents .arrow-svg i,
+#licenses .arrow-svg i,
+#pravoinfa .arrow-svg i,
+#lekarstvo .arrow-svg i {
+  color: #83e6d4;
+  font-size: 50px;
+}
+#documents .btn,
+#licenses .btn,
+#pravoinfa .btn,
+#lekarstvo .btn {
+  background-color: #83e6d4;
+  border: 0;
+}
+#documents .btn:hover,
+#licenses .btn:hover,
+#pravoinfa .btn:hover,
+#lekarstvo .btn:hover {
+  background-color: #ceefe9;
+}
+
+#pravila li {
+  padding: 10px 0;
+}
+#pravila li::marker {
+  font-weight: bold;
+}
+
+#page2 img {
+  width: 100px;
+}
+
 #header {
   font-size: 18px;
 }
@@ -727,8 +806,8 @@ body {
   border-bottom: 1px solid white;
 }
 #navmini .svg-backgraund {
-  height: 280px;
-  width: 300px;
+  width: -moz-max-content;
+  width: max-content;
 }
 #navmini .svg-backgraund svg {
   fill: #dedede;
@@ -1054,23 +1133,31 @@ body {
     width: 100% !important;
   }
 }
+#breadcrumbs {
+  font-size: 18px;
+  margin: 15px auto;
+}
 #breadcrumbs a {
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-color: #496f6e;
 }
 #breadcrumbs a:hover {
-  text-decoration: none;
+  background-color: #fbeed0;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
 #breadcrumbs ul > li {
   list-style-type: none;
 }
 #breadcrumbs .breadcrumb-not-active {
   color: black;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fef7e7;
+  margin-right: 10px;
 }
 #breadcrumbs .breadcrumb-not-active:after {
   font: 16px "maIco";
   color: #496f6e;
-  content: ">";
   display: inline-block;
   padding: 0 12px;
 }

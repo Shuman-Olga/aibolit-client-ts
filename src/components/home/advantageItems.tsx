@@ -1,6 +1,7 @@
-import { typeAdvantageBlok } from "../../types/typeAdvantageBlok";
+import React from "react";
+import { IAdvantageBlok } from "../../types/IAdvantageBlok";
 
-export function AdvantageItem({ title, img }: typeAdvantageBlok) {
+export function AdvantageItem({ title, img }: IAdvantageBlok) {
   return (
     <>
       <div className="col">

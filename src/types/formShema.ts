@@ -1,7 +1,6 @@
 import { z } from "zod";
 
 const phoneRegex = new RegExp(
-  // eslint-disable-next-line no-useless-escape
   /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{6,10}$/
 );
 

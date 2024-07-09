@@ -1,7 +1,6 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
-
-import BInimg1 from "../../assets/img/foto.jpeg";
 
 export function BlockInfo() {
   return (
@@ -9,7 +8,12 @@ export function BlockInfo() {
       <Container>
         <h1 className="h1-font">Айболит-детская медицинская служба В Томске</h1>
         <div className="d-flex justify-content-around">
-          <img src={BInimg1} alt="foto" className="img-foto" title="foto" />
+          <img
+            src={require(`../../assets/img/foto.jpg`)}
+            alt="foto"
+            className="img-foto"
+            title="foto"
+          />
           <div className="w-50 text-md-start fst-italic fs-5">
             <div className="width-svg">
               <svg

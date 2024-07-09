@@ -1,8 +1,6 @@
+import React from "react";
 import { Container } from "react-bootstrap";
 
-import BCimg1 from "../../assets/img/map.png";
-import BCimg2 from "../../assets/img/time.png";
-import BCimg3 from "../../assets/img/phone-tel.png";
 import { ModalWindows } from "../modal/Modal";
 import { FormCallingDoctor } from "../modal/FormСalling";
 
@@ -18,7 +16,7 @@ export function BlockContacts() {
 
           <div className="d-flex align-items-center py-2">
             <img
-              src={BCimg1}
+              src={require(`../../assets/img/map.png`)}
               alt="img-map"
               className="img me-3"
               title="address"
@@ -27,7 +25,7 @@ export function BlockContacts() {
           </div>
           <div className="d-flex align-items-center py-2">
             <img
-              src={BCimg2}
+              src={require(`../../assets/img/time.png`)}
               alt="img-time"
               className="img me-3"
               title="time"
@@ -41,7 +39,7 @@ export function BlockContacts() {
           </div>
           <div className="d-flex align-items-center py-2">
             <img
-              src={BCimg3}
+              src={require(`../../assets/img/phone-tel.png`)}
               alt="img-phone"
               className="img me-3"
               title="phone"
@@ -51,9 +49,9 @@ export function BlockContacts() {
             </a>
           </div>
           <div className="d-flex justify-content-center mt-4 ">
-            <ModalWindows title="Вызов врача на дом">
+            {/* <ModalWindows title="Вызов врача на дом">
               <FormCallingDoctor />
-            </ModalWindows>
+            </ModalWindows> */}
           </div>
         </div>
         <div className="block-map ">

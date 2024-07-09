@@ -1,6 +1,6 @@
-import { TypeKindDoctor } from "../types/typeKindDoctors";
+import { IKindDoctor } from "../types/IKindDoctors";
 
-export const dataKindDoctors: TypeKindDoctor[] = [
+export const dataKindDoctors: IKindDoctor[] = [
   { id: 0, name: "Врач" },
   { id: 1, name: "Педиатр" },
   { id: 2, name: "Отоларинголог" },

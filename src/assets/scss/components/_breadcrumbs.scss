@@ -1,10 +1,15 @@
 #breadcrumbs {
+  font-size: 18px;
+  margin: 15px auto;
   a {
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: #496f6e;
 
     &:hover {
-      text-decoration: none;
+      background-color: #fbeed0;
+      -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     }
   }
 
@@ -14,11 +19,14 @@
 
   .breadcrumb-not-active {
     color: black;
-
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fef7e7;
+    margin-right: 10px;
     &:after {
       font: 16px "maIco";
       color: #496f6e;
-      content: ">";
+      // content: ">";
       display: inline-block;
       padding: 0 12px;
     }

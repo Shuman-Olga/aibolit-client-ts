@@ -1,6 +1,7 @@
+import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 
-import { LinkMenu } from "../../data/dataLinkMenu";
+import { routesMain } from "../../routes/routes";
 
 export function Navigation() {
   return (
@@ -12,14 +13,14 @@ export function Navigation() {
           className="justify-content-center"
         >
           <Nav className="mr-auto ">
-            {LinkMenu.map((link) => (
+            {routesMain[0].children.slice(1, -1).map((link) => (
               <Nav.Link
                 key={link.path}
                 href={link.path}
                 target="_top"
                 rel="noopener noreferrer"
               >
-                {link.title}
+                {link.breadcrumb}
               </Nav.Link>
             ))}
           </Nav>

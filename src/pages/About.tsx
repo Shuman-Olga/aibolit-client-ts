@@ -1,53 +1,34 @@
+import React from "react";
 import { Container } from "react-bootstrap";
-// import BlockAdvantages from "../../components/home/BlockAdvantages";
-import fotoinfo from "../assets/img/foto-info.jpeg";
-import { Helmet } from "react-helmet-async";
-// import NavMini from "../components/navigations/NavMini";
+
+import { SeoPage } from "../components/Seo";
+import { dataSeoAbout } from "../data/Seo/dataSeoPages1Level";
+import { BlockAdvantages } from "../components/home/BlockAdvantages";
+import { NavMini } from "../components/navigations/NavMini";
 
 export function About() {
   return (
     <Container fluid id="about">
-      <Helmet>
-        <title>Айболит-детская медицинская служба|О нас</title>
-        <meta
-          name="description"
-          content="Детская медицинская служба 'Айболит' предлагает услуги: вызов впедиатра на дом, консультация детского врача на дому, программы наблюдения за ребенком на дому. Вакцинация. Анализвы на ДОМУ. Патронаж новорожденных."
-        />
-
-        <meta
-          name="keywords"
-          content="узкие специалисты на дом, педиатр на дом томск, детский врач на дом, патронаж новорожденных,  Детская медицинская служба 'Айболит'"
-        />
-        <link rel="canonical" href="https://aibolit.tom.ru/o-nas/" />
-        <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Айболит" />
-        <meta
-          property="og:title"
-          content="Айболит-детская медицинская служба|О нас"
-        />
-        <meta
-          property="og:description"
-          content="Детская медицинская служба 'Айболит' предлагает услуги: вызов впедиатра на дом, консультация детского врача на дому, программы наблюдения за ребенком на дому. Вакцинация. Анализвы на ДОМУ. Патронаж новорожденных."
-        />
-        <meta property="og:url" content="https://aibolit.tom.ru/o-nas/" />
-      </Helmet>
+      <SeoPage {...dataSeoAbout} />
       <div className="page-h1">
-        <h1>О нас</h1>
+        <Container>
+          <h1>О нас</h1>
+        </Container>
       </div>
       <Container>
-        <div className="info-about d-flex justify-content-between mt-5">
+        <div className="info-about d-flex justify-content-evenly mt-5">
           <img
-            src={fotoinfo}
+            src={require(`../assets/img/massage.jpg`)}
             alt="foto-aibolot"
-            className=" foto"
+            className=" foto w-50"
             title="foto"
           />
-          {/* <NavMini /> */}
+          <NavMini {...{ path: "/o-nas/" }} />
         </div>
         <div className="text mt-4">
           <p className="text-about">
             <span className="text-bold">
-              Детская медицинская служба "Айболит"
+              Детская медицинская служба &quot;Айболит &quot;
             </span>{" "}
             была создана в 2001 года для оказания квалифицированной медицинской
             <span className="text-italic">помощи детям на дому</span>! Айболит
@@ -103,9 +84,9 @@ export function About() {
         </div>
       </Container>
       <div className="container-fluid line">
-        <h2>Детская медицинская служба "Айболит" поможет Вам!</h2>
+        <h2>Детская медицинская служба &quot;Айболит &quot; поможет Вам!</h2>
       </div>
-      {/* <BlockAdvantages /> */}
+      <BlockAdvantages />
     </Container>
   );
 }
